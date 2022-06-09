@@ -1,0 +1,18 @@
+image:
+  file: .gitpod.dockerfile
+
+tasks:
+  - name: initialize
+    before: |
+      echo "🚀 before"
+
+    init: |
+      echo "🚀 initialize"
+
+
+vscode:
+  extensions:
+    - pkief.material-icon-theme
+    - bungcip.better-toml
+    - aaron-bond.better-comments
+    - grain-lang.vscode-grain
