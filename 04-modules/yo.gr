@@ -1,0 +1,26 @@
+// https://github.com/AnActualEmerald/goldilox/blob/main/src/util/console.gr
+
+import File from "sys/file"
+import List from "list"
+
+let input = (message) => {
+  print(message)
+  let mut ret = []
+  while (true) {
+    match (File.fdRead(File.stdin, 1)) {
+      Ok((s, _)) => {
+        if (s != "\n") {
+          ret = List.append(ret, [s])
+          void
+        } else {
+          break
+        }
+      },
+      Err(e) => print(e),
+    }
+  }
+  List.join("", ret)
+}
+
+print(input("🤖 > please type something"))
+
