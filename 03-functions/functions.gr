@@ -1,0 +1,22 @@
+// Playing with Grain
+
+import String from "string"
+import Array from "array"
+import List from "list"
+
+
+
+let division = (x, y) => {
+  x/y
+}
+
+print(division(84,2))
+print(division(84.5,2))
+
+
+let sayHello = (words) => {
+  let newList = List.append(["Hello"], words)
+  List.join(" ", newList)
+}
+
+print(sayHello(["Bob", "Morane"]))

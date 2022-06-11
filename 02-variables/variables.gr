@@ -1,0 +1,10 @@
+// Playing with Grain
+
+let firstName = "Bob"
+let lastName = "Morane"
+let age = 42
+
+// Human tuple
+let human = (firstName, lastName, age)
+
+print(human)

@@ -1,0 +1,10 @@
+// Playing with Grain
+
+record Human { mut firstName: String, lastName: String, age: Number }
+
+let bob = { firstName: "Bob", lastName: "Morane", age: 42 }
+print(bob)
+
+bob.firstName = "Bobby"
+
+print(bob)
