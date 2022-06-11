@@ -5,9 +5,24 @@ tasks:
   - name: initialize
     before: |
       echo "🚀 before"
+      # ------------------------------------
+      # wasmer
+      # ------------------------------------
+      source /home/gitpod/.wasmer/wasmer.sh
+      wasmer --version
+      # ------------------------------------
+      # wasmtime
+      # ------------------------------------
+      wasmtime --version
+      # ------------------------------------
+      # wasmedge dependencies
+      # ------------------------------------
+      source /home/gitpod/.wasmedge/env 
+      wasmedge --version
+
 
     init: |
-      echo "🚀 initialize"
+      echo "🚀 init"
 
 
 vscode:
@@ -16,3 +31,8 @@ vscode:
     - bungcip.better-toml
     - aaron-bond.better-comments
     - grain-lang.vscode-grain
+
+
+
+
+

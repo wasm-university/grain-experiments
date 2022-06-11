@@ -1,5 +1,8 @@
 FROM gitpod/workspace-full
 
+RUN sudo apt-get update && \
+    sudo apt-get install gettext libncurses5 libxkbcommon0 libtinfo5 -y
+
 USER gitpod
 
 # ------------------------------------

@@ -1,0 +1,39 @@
+import Process from "sys/process"
+import Array from "array"
+import Result from "result"
+
+// grain compile hello.gr
+// wasmer hello.gr.wasm Bob Morane
+
+record Person { firstName: String, lastName: String }
+
+
+match (Process.argv()) {
+  Ok(values) => {
+    print(values)
+    if(Array.length(values) < 3) {
+      print("😡")
+    } else {
+      let person = { firstName: Array.get(1, values), lastName: Array.get(2, values) }
+      print(person)
+    }
+  },
+  Err(err) => print("😡 ouch")
+}
+
+let division = (x, y) => {
+  match(y) {
+    0 => Err("😡 Divide /0"),
+    _ => Ok(x/y)
+  }
+}
+
+match(division(84, 2)) {
+  Ok(res) => print(res),
+  Err(err) => print(err)
+}
+
+match(division(42, 0)) {
+  Ok(res) => print(res),
+  Err(err) => print(err)
+}
