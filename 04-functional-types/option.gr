@@ -1,0 +1,31 @@
+// Functional Types
+//import Result from "result"
+import Option from "option"
+
+
+let howManyThings = (numberOfThings) => {
+  if(numberOfThings==0) {
+    None
+  } else {
+    Some(numberOfThings)
+  }
+}
+
+// you cannot use null or nil
+
+let thingsNb = howManyThings(0)
+
+if(Option.isNone(thingsNb)) {
+  print("😢 you gave me nothing")
+} else {
+  print("🥰 thank you, you gave me something:")
+  print(Option.unwrap(thingsNb))
+}
+
+match (howManyThings(42)) {
+    Some(numberOfThings) => {
+      print("🥰 thank you, you gave me something:")
+      print(numberOfThings)
+    },
+    None => print("😢 you gave me nothing")
+}

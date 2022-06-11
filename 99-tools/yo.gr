@@ -3,8 +3,12 @@
 import File from "sys/file"
 import List from "list"
 
+let display = (text) => {
+  File.fdWrite(File.stdout, text)
+}
+
 let input = (message) => {
-  print(message)
+  display(message)
   let mut ret = []
   while (true) {
     match (File.fdRead(File.stdin, 1)) {
@@ -22,5 +26,6 @@ let input = (message) => {
   List.join("", ret)
 }
 
-print(input("🤖 > please type something"))
+let inputLine = input("🤖 please type something > ")
+print(inputLine)
 

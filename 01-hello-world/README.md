@@ -2,10 +2,11 @@
 
 "Hello World" is the best way to check your setup. Create a file named `hello-world.gr` with the below source code:
 
-```ocaml
+```javascript
 /* Hello world with Grain */
 
 print("👋 Hello World 🌍")
+
 ```
 
 Then:
