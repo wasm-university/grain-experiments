@@ -16,9 +16,9 @@ let division = (x, y) => {
   Float64.toNumber(r)
 }
 
-let r = division(4.5,0.5)
+let r = division(4.5,0)
 match(r) {
-  r when Number.isInfinite(r) == true  => print("ouch"),
+  r when Number.isInfinite(r) => print("ouch"),
   _ => print(r)
 }
 
