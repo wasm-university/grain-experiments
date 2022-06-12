@@ -1,0 +1,61 @@
+// Functional Types
+import Result from "result"
+import Number from "number"
+import Exception from "exception"
+import Float32 from "float32"
+
+import Float64 from "float64"
+
+//import Option from "option"
+
+
+let division = (x, y) => {
+  let a = Float64.fromNumber(x)
+  let b = Float64.fromNumber(y)
+  let r = Float64.div(a,b)
+  Float64.toNumber(r)
+}
+
+let r = division(4.5,0.5)
+match(r) {
+  r when Number.isInfinite(r) == true  => print("ouch"),
+  _ => print(r)
+}
+
+print(division(4,5))
+print(division(4.5,5))
+
+print(division(4.5,0))
+
+print(division(5, 0))
+
+
+/*
+print(Number.div(84,2))
+print(Number.div(84.5,2))
+
+print(Number.div(84.5,0))
+
+
+
+print(Number.isInfinite(Number.div(84.5,0)))
+
+print(Number.div(84,0))
+
+print(Number.isNaN(Number.div(84,0)))
+
+
+//print(Number.div(84,0))
+*/
+
+/*
+match(division(5.8,0)) {
+  Ok(result) => print(result),
+  Err(error) => print(error) // DivisionByZero: Division by zero
+}
+
+match(division(5,0)) {
+  Ok(result) => print(result),
+  Err(error) => print(error) // DivisionByZero: Division by zero
+}
+*/

@@ -12,6 +12,7 @@ let division = (x, y) => {
 print(division(84,2))
 print(division(84.5,2))
 
+//print(division(84.5,0))
 
 let sayHello = (words) => {
   let newList = List.append(["Hello"], words)
