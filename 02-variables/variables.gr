@@ -2,9 +2,15 @@
 
 let firstName = "Bob"
 let lastName = "Morane"
-let age = 42
+
+print("👋 Hello" ++ firstName ++ " " ++ lastName)
+
 
 // Human tuple
-let human = (firstName, lastName, age)
+let mut human = (firstName, lastName, 42)
+
+print(human)
+
+human = (firstName, lastName, 53)
 
 print(human)

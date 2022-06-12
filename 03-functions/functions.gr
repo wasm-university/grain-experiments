@@ -1,7 +1,5 @@
 // Playing with Grain
 
-//import String from "string"
-//import Array from "array"
 import List from "list"
 
 
@@ -15,7 +13,7 @@ print(division(84.5,2))
 //print(division(84.5,0))
 
 let sayHello = (words) => {
-  let newList = List.append(["Hello"], words)
+  let newList = List.append(["👋", "Hello"], words)
   List.join(" ", newList)
 }
 

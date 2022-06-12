@@ -1,7 +1,5 @@
 // Functional Types
-//import Result from "result"
 import Option from "option"
-
 
 let howManyThings = (numberOfThings) => {
   if(numberOfThings==0) {
