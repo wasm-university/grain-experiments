@@ -1,0 +1,39 @@
+
+
+
+record Human { 
+  mut firstName: String, 
+  mut lastName: String, 
+  mut sayHello: () -> String 
+}
+
+let newHuman = (firstName, lastName) => {
+  
+  // initialise
+  let humanInstance = { 
+    firstName: firstName, 
+    lastName: lastName, 
+    sayHello: () => {"default"} 
+  }
+
+  let sayHello = () => {
+    "👋 Hello, I am " ++ humanInstance.firstName ++ " " ++ humanInstance.lastName
+  }
+  humanInstance.sayHello = sayHello
+  
+  humanInstance
+}
+
+let jane = newHuman("Jane", "Doe")
+let john = newHuman("John", "Doe")
+
+
+print(jane.sayHello())
+print(john.sayHello())
+
+jane.firstName = "Janny"
+john.firstName = "Johny"
+
+print(jane.sayHello())
+print(john.sayHello())
+
